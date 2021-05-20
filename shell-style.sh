@@ -21,5 +21,6 @@ if [ -n "$1" ]; then
     "-h"|"--help") _help;;
     "-c"|"--config") _config;;
     "-s"|"--start") _start;;
+    *) _help ;;
   esac
 fi
