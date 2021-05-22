@@ -16,6 +16,11 @@ _start()
   exit
 }
 
+_foo()
+{
+  exit
+}
+
 if [ -n "$1" ]; then
   case "$1" in
     "-h"|"--help") _help;;
@@ -23,4 +28,6 @@ if [ -n "$1" ]; then
     "-s"|"--start") _start;;
     *) _help ;;
   esac
+else
+  _foo
 fi
